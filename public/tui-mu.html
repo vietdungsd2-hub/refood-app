@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Túi mù từ cửa hàng – ReFood.vn</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="bag">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div>
+      <span class="script" style="font-size:24px">Giải cứu thực phẩm mỗi ngày</span>
+      <h1>Túi mù từ cửa hàng<br>Ngon – Rẻ – Không lãng phí</h1>
+      <p>Mỗi túi mù chứa những món ngon còn tồn trong ngày của cửa hàng, giá chỉ bằng một phần nhỏ giá trị thật.</p>
+      <div class="hero-search"><span data-ico="search"></span><input id="fq" type="search" placeholder="Tìm cừa hàng, địa chỉ, khu vực…" aria-label="Tìm túi mù"></div>
+    </div>
+  </div>
+  <img class="ph-img" src="images/basket.jpg" alt="Rau củ tươi trong giỏ">
+</section>
+
+<section class="section">
+  <div class="container shop">
+    <aside class="filters">
+      <form id="fform">
+        <h4>Khu vực</h4>
+        <div class="field sel"><label for="fprov">Tỉnh / Thành phố</label><select id="fprov"><option value="">Tất cả</option></select></div>
+        <div class="field sel"><label for="fdist">Quận / Huyện</label><select id="fdist" disabled><option value="">Tất cả</option></select></div>
+        <h4>Lĩnh vực túi</h4>
+        <div id="typeFilters"></div>
+        <h4>Giá bán</h4>
+        <label><input type="radio" name="price" value="all" checked> Tất cả</label>
+        <label><input type="radio" name="price" value="low"> Dưới 40.000đ</label>
+        <label><input type="radio" name="price" value="mid"> 40.000đ – 60.000đ</label>
+        <label><input type="radio" name="price" value="high"> Trên 60.000đ</label>
+        <h4>Tình trạng</h4>
+        <label><input type="checkbox" id="fonly"> Chỉ hiện túi còn hàng</label>
+      </form>
+    </aside>
+    <div>
+      <div class="toolbar">
+        <span class="count" id="fcount"></span>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <select id="fsort" aria-label="Sắp xếp">
+            <option value="time">Giờ nhận sớm nhất</option>
+            <option value="price">Giá thấp đến cao</option>
+            <option value="discount">Giảm giá nhiều nhất</option>
+          </select>
+        </div>
+      </div>
+      <div class="bag-grid" id="bagGrid"></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

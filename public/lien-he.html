@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liên hệ – ReFood.vn</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div>
+      <h1>Liên hệ với chúng tôi</h1>
+      <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn!</p>
+    </div>
+  </div>
+  <img class="ph-img" src="images/contact.jpg" alt="Hỗ trợ khách hàng">
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <form class="card" novalidate data-api="/contact" data-msg="Cảm ơn bạn! ReFood sẽ phản hồi sớm nhất có thể.">
+      <h2>Gửi tin nhắn cho chúng tôi</h2>
+      <p class="sub">Vui lòng điền thông tin bên dưới, chúng tôi sẽ phản hồi sớm nhất.</p>
+      <div class="field"><label>Họ và tên *</label><input name="name" required placeholder="Nhập họ và tên"><span class="err">Vui lòng nhập họ và tên.</span></div>
+      <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="Nhập email"><span class="err">Email không hợp lệ.</span></div>
+      <div class="field"><label>Số điện thoại</label><input name="phone" placeholder="Nhập số điện thoại"><span class="err">Số điện thoại không hợp lệ.</span></div>
+      <div class="field"><label>Nội dung *</label><textarea name="msg" rows="5" required placeholder="Nhập nội dung tin nhắn…"></textarea><span class="err">Vui lòng nhập nội dung.</span></div>
+      <button class="btn btn-solid btn-block" type="submit">Gửi liên hệ</button>
+    </form>
+    <div class="card">
+      <h2>Thông tin liên hệ</h2>
+      <ul class="info-list" style="margin-top:14px">
+        <li><span class="dot" data-ico="pin"></span><div><b>Địa chỉ</b>56 Nguyễn Văn Cừ, Quận Long Biên, Hà Nội</div></li>
+        <li><span class="dot" data-ico="phone"></span><div><b>Điện thoại</b>(+84) 123 456 789<br>(Thứ 2 – Thứ 7: 8h – 17h)</div></li>
+        <li><span class="dot" data-ico="mail"></span><div><b>Email</b>support@refood.vn</div></li>
+      </ul>
+      <div class="map"><img src="images/map.svg" alt="Bản đồ"></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

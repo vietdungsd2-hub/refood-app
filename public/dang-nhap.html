@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đăng nhập – ReFood.vn</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<div id="site-header"></div>
+
+<section class="page-hero" style="min-height:260px">
+  <div class="container">
+    <div>
+      <h1>Thực phẩm sạch<br>Cho cuộc sống lành mạnh</h1>
+      <p>Cùng ReFood kết nối với những nhà hàng đối tác và giải cứu thực phẩm mỗi ngày bằng túi mù giá tốt.</p>
+    </div>
+  </div>
+  <img class="ph-img" src="images/basket.jpg" alt="Rau củ tươi trong giỏ">
+</section>
+
+<section class="section tight">
+  <div class="container duo overlap">
+    <form class="card" novalidate data-api="/auth/login" data-auth data-msg="Đăng nhập thành công! Đang chuyển hướng…" data-go="index.html">
+      <h2 style="text-align:center">Đăng nhập</h2>
+      <p class="sub" style="text-align:center">Chào mừng bạn quay trở lại!<br>Vui lòng đăng nhập để tiếp tục.</p>
+      <div class="field"><input name="user" required placeholder="Email hoặc số điện thoại" aria-label="Email hoặc số điện thoại"><span class="err">Vui lòng nhập email hoặc số điện thoại.</span></div>
+      <div class="field"><input type="password" name="password" required placeholder="Mật khẩu" aria-label="Mật khẩu"><span class="err">Vui lòng nhập mật khẩu.</span></div>
+      <div class="split"><label class="check" style="margin:0"><input type="checkbox"> Ghi nhớ đăng nhập</label><a href="lien-he.html">Quên mật khẩu?</a></div>
+      <button class="btn btn-solid btn-block" type="submit">Đăng nhập</button>
+      <p class="or">hoặc đăng nhập với</p>
+      <div class="social"><button type="button">Google</button><button type="button">Facebook</button></div>
+    </form>
+    <form class="card" novalidate data-api="/auth/register" data-auth data-register data-msg="Đăng ký thành công! Chào mừng bạn đến với ReFood.">
+      <h2 style="text-align:center">Đăng ký</h2>
+      <p class="sub" style="text-align:center">Tạo tài khoản để trải nghiệm đầy đủ<br>các tính năng của ReFood.</p>
+      <div class="field"><input name="name" required placeholder="Họ và tên" aria-label="Họ và tên"><span class="err">Vui lòng nhập họ và tên.</span></div>
+      <div class="field"><input type="email" name="email" required placeholder="Email" aria-label="Email"><span class="err">Email không hợp lệ.</span></div>
+      <div class="field"><input type="password" name="password" required placeholder="Mật khẩu" aria-label="Mật khẩu"><span class="err">Mật khẩu tối thiểu 8 ký tự.</span></div>
+      <div class="field"><input type="password" name="confirm" required placeholder="Xác nhận mật khẩu" aria-label="Xác nhận mật khẩu"><span class="err">Mật khẩu xác nhận không khớp.</span></div>
+      <button class="btn btn-solid btn-block" type="submit">Đăng ký</button>
+      <p class="alt">Muốn bán túi mù? <a href="dang-ky.html?type=restaurant">Đăng ký quán ăn</a></p>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

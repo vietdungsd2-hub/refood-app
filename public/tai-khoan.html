@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tài khoản của tôi – ReFood.vn</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="account">
+<div id="site-header"></div>
+
+<section class="page-hero" style="min-height:190px">
+  <div class="container">
+    <div>
+      <h1>Tài khoản của tôi</h1>
+      <p id="hello">Đang tải…</p>
+    </div>
+  </div>
+  <img class="ph-img" src="images/basket.jpg" alt="">
+</section>
+
+<section class="section tight">
+  <div class="container overlap acct">
+    <div class="card">
+      <h2>Đơn đặt túi của tôi</h2>
+      <div id="orders" class="list"><p class="muted">Đang tải…</p></div>
+    </div>
+
+    <div id="shopPanel" class="acct" hidden>
+      <div class="card">
+        <h2>Đăng túi mù mới</h2>
+        <p class="sub">Dành cho tài khoản cửa hàng. Túi sẽ hiện ngay ở trang chủ và trang Túi mù từ cửa hàng, kèm khu vực và link Google Maps của quán.</p>
+        <form id="bagForm" novalidate>
+          <div class="grid2">
+            <div class="field"><label>Tỉnh / Thành phố *</label><input name="province" list="provList" required placeholder="Ví dụ: Hà Nội"><datalist id="provList"><option value="Hà Nội"><option value="TP. Hồ Chí Minh"><option value="Đà Nẵng"><option value="Hải Phòng"><option value="Cần Thơ"><option value="Huế"></datalist><span class="err">Nhập Tỉnh/Thành phố (2–40 ký tự).</span></div>
+            <div class="field"><label>Quận / Huyện *</label><input name="district" required placeholder="Ví dụ: Hoàn Kiếm"><span class="err">Nhập Quận/Huyện (2–40 ký tự).</span></div>
+            <div class="field wide"><label>Địa chỉ lấy túi *</label><input name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"><span class="err">Địa chỉ từ 5 đến 200 ký tự.</span></div>
+            <div class="field wide"><label>Link Google Maps của quán</label><input name="mapUrl" type="url" placeholder="https://maps.app.goo.gl/… (bỏ trống thì web tự tạo link tìm theo địa chỉ)"><span class="err">Link phải bắt đầu bằng https://</span></div>
+            <div class="field wide"><label>Trang riêng của quán (nếu có)</label><input name="shopUrl" type="url" placeholder="https://…"><span class="err">Link phải bắt đầu bằng https://</span></div>
+            <div class="field"><label>Lĩnh vực túi *</label><input name="type" list="typeList" required placeholder="Ví dụ: Túi bánh"><datalist id="typeList"><option value="Túi bánh"><option value="Túi sữa"><option value="Túi gia vị"><option value="Túi sushi"><option value="Túi rau củ"><option value="Túi cơm chay"></datalist><span class="err">Lĩnh vực từ 2 đến 40 ký tự.</span></div>
+            <div class="field"><label>Tên túi *</label><input name="name" required placeholder="Ví dụ: Bánh mì & croissant"><span class="err">Tên túi từ 2 đến 100 ký tự.</span></div>
+            <div class="field"><label>Mô tả ngắn</label><input name="tag" placeholder="Ví dụ: Nướng mới mỗi chiều"><span class="err">Tối đa 60 ký tự.</span></div>
+            <div class="field"><label>Hạn dùng (sắp bị huỷ nhưng vẫn dùng được)</label><input name="shelfNote" placeholder="Ví dụ: Dùng tốt trong ngày"><span class="err">Tối đa 80 ký tự.</span></div>
+            <div class="field"><label>Mở bán trên web từ</label><input name="saleFrom" type="time"><span class="err">Giờ không hợp lệ.</span></div>
+            <div class="field"><label>Đến</label><input name="saleTo" type="time"><span class="err">Giờ kết thúc phải sau giờ bắt đầu.</span></div>
+            <div class="field"><label>Giá bán (đ) *</label><input name="price" type="number" min="0" step="1000" required><span class="err">Giá bán không hợp lệ.</span></div>
+            <div class="field"><label>Giá trị ban đầu (đ) *</label><input name="value" type="number" min="0" step="1000" required><span class="err">Phải lớn hơn hoặc bằng giá bán.</span></div>
+            <div class="field"><label>Khách nhận túi từ *</label><input name="pickupFrom" type="time" required><span class="err">Giờ bắt đầu không hợp lệ.</span></div>
+            <div class="field"><label>Đến *</label><input name="pickupTo" type="time" required><span class="err">Giờ kết thúc phải sau giờ bắt đầu.</span></div>
+            <div class="field"><label>Số túi *</label><input name="quantity" type="number" min="0" max="500" value="5" required><span class="err">Số túi từ 0 đến 500.</span></div>
+          </div>
+          <button class="btn btn-solid" type="submit">Đăng túi mù</button>
+        </form>
+      </div>
+      <div class="card"><h2>Túi của quán</h2><div id="myBags" class="list"><p class="muted">Đang tải…</p></div></div>
+      <div class="card"><h2>Đơn khách đã đặt</h2><div id="shopOrders" class="list"><p class="muted">Đang tải…</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
